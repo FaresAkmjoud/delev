@@ -1,6 +1,10 @@
 const { Client, Intents, MessageEmbed, MessageButton, MessageActionRow, Modal, TextInputComponent } = require('discord.js');
 const fs = require('fs');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
+require('dotenv').config();
+
+// الوصول إلى الرمز السري
+const token = process.env.DISCORD_BOT_TOKEN;
 
 const { exec } = require('child_process');
 const ticketCategoryID = '1266885043767476265';
